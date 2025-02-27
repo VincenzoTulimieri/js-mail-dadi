@@ -9,23 +9,31 @@ const emailList = [
     'marco@gmail.com',
 ]
 
-console.log(emailList)
 
- let userEmail = prompt('Inserisci la tua Email');
 
+let emailFound = false
+
+// inserico l'input per l'iserimeto dati da parte del user 
+
+let userEmail = prompt('Inserisci la tua Email');
+
+
+// creo ciclo "for" per verificare che la email è presenete in lista 
 
 for(let i = 0; i < emailList.length; i++) {
-
     let emailValid = emailList[i];
 
     if(userEmail === emailValid){
-        console.log('email corretta')
+        emailFound = true
         break
-    } else {
-        console.log('email non corretta')
-        break
-    }
-    
+    }    
 }
+// stampo messaggio di validazione o non validazione
 
-
+    if(emailFound){
+        console.log('Email valida')
+        
+    } else {
+        console.log('Email non valida')
+        
+    }
